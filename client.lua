@@ -1,3 +1,12 @@
+ESX = nil
+
+Citizen.CreateThread(function()
+    while ESX == nil do
+        TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+        Citizen.Wait(10)
+    end
+end)
+
 local display = false
 local historyDisplay = false
 local isMeterRunning = false
@@ -254,16 +263,21 @@ function isPlayerTaxiDriver()
     local ped = PlayerPedId()
     local vehicle = GetVehiclePedIsIn(ped, false)
     local seat = -1
+    local playerData = ESX.GetPlayerData()
 
-    if GetPedInVehicleSeat(vehicle, seat) == ped then
-        for _, model in ipairs(Config.TaxiModel) do
-            if GetEntityModel(vehicle) == GetHashKey(model) then
-                return true
+    if playerData.job and playerData.job.name == 'taxi' then
+        if GetPedInVehicleSeat(vehicle, seat) == ped then
+            for _, model in ipairs(Config.TaxiModel) do
+                if GetEntityModel(vehicle) == GetHashKey(model) then
+                    return true
+                end
             end
         end
     end
+
     return false
 end
+
 
 function updateMeterData()
     local vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
