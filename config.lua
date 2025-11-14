@@ -1,6 +1,6 @@
 Config = {}
 
-Config.TaxiModel = { 'taxi', 'kuruma', 'adder' }
+Config.TaxiModel = { 'taxi' }
 Config.FareRate = 0.5 -- 1.0 is equal with the distance
 Config.MaxRidesHistory = 10
 Config.PauseOnReset = true
@@ -14,3 +14,4 @@ Config.Keys = {
 }
 
 -- Get the exactly keys codes here: https://docs.fivem.net/docs/game-references/controls/
+
