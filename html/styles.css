@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  bottom: 30px;
+  bottom: 320px;
   right: 30px;
   z-index: 10;
   transition: transform 0.3s ease-in-out;
@@ -52,7 +52,7 @@ body {
 }
 
 #fare {
-  color: #f39c12;
+  color: #2ec90f;
   font-size: 22px;
   font-weight: bold;
 }
@@ -162,7 +162,7 @@ body {
   max-height: auto;
   overflow-y: auto;
   overflow-x: hidden;
-  border-top: 2px solid #f39c12;
+  border-top: 2px solid #2ec90f;
 }
 
 #historyList li {
@@ -173,7 +173,7 @@ body {
   border-radius: 8px;
   font-size: 16px;
   color: #fff;
-  border-left: 4px solid #f39c12; 
+  border-left: 4px solid #2ec90f; 
   transition: all 0.3s ease;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
 }
@@ -188,7 +188,7 @@ body {
 .history-fare {
   font-size: 18px;
   font-weight: bold;
-  color: #f39c12; 
+  color: #2ec90f; 
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
 }
 
